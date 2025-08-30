@@ -36,7 +36,7 @@ int main() {
     }
     while(cur_torre <= torre_mov);
 
-
+    //MOVIMENTAÇÃO DA RAINHA, LAÇO FOR
     printf("\nRAINHA MOVE\n\n");
     for (int i = 1; i <= rainha_mov; i++){
         printf("ESQUERDA\n");
