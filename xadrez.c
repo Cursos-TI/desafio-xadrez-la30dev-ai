@@ -6,7 +6,7 @@
 
 int main() {
 
-git
+
     //DECLARAÇÃO DE VARIÁVEIS (NÚMERO DE MOVIMENTAÇÕES MÁXIMAS DAS PEÇAS)
     int bispo_mov = 6;
     int torre_mov = 5;
