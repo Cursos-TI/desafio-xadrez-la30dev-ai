@@ -11,6 +11,7 @@ int main() {
     int bispo_mov = 6;
     int torre_mov = 5;
     int rainha_mov = 1;
+    int cavalo_mov = 3;
 
 
     //MOVIMENTAÇÃO DO BISPO, LAÇO WHILE
@@ -41,6 +42,18 @@ int main() {
     for (int i = 1; i <= rainha_mov; i++){
         printf("ESQUERDA\n");
     }
+
+//MOVIMENTAÇÃO DA TORRE, LAÇO WHILE-DO
+    printf("\nCAVALO MOVE\n\n");
+    int cur_cavalo = 1;
+
+    while(cur_cavalo <= torre_mov){
+        for(int i = 1; i<=2;i++){
+            printf("BAIXO\n");}
+        cur_cavalo++;
+        printf("ESQUERDA\n");
+    };
+
     printf("\n");
     return 0;
 }
