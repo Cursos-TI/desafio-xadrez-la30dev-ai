@@ -43,7 +43,7 @@ int main() {
         printf("ESQUERDA\n");
     }
 
-//MOVIMENTAÇÃO DA TORRE, LAÇO WHILE-DO
+//MOVIMENTAÇÃO DO CAVALO, LOOP ANINHADO
     printf("\nCAVALO MOVE\n\n");
     int cur_cavalo = 1;
 
