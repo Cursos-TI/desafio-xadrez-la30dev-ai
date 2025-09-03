@@ -8,59 +8,63 @@ int main() {
 
 
     //DECLARAÇÃO DE VARIÁVEIS (NÚMERO DE MOVIMENTAÇÕES MÁXIMAS DAS PEÇAS)
-    int bispo_mov = 6;
+    int bispo_mov = 5;
     int torre_mov = 5;
-    int rainha_mov = 1;
-    int cavalo_mov = 3;
+    int rainha_mov = 5;
+    int cavalo_mov = 1;
 
-
-
-
+//FUNÇÃO RECURSIVA DE MOVIMENTAÇÃO DO BISPO 5 CASAS DIAGONAL DIREITA - CIMA
     void bispo_move(int b){
-        if (b > 0){
-            if (b %2 == 0){
+        if (b>0){
+        for(int i = 0; i< 1; i++){
+            for(int j = 0; j< 1; j++){
+                printf("DIREITA\n");
+            }
             printf("CIMA\n");
         }
-        else{
-            printf("DIREITA\n");
-        }
-            bispo_move(b-1);
-        }
+        bispo_move(b-1);
     }
+             }
 
-
+//FUNÇÃO RECURSIVA DE MOVIMENTAÇÃO DA TORRE 5 CASAS PARA A DIREITA
     void torre_move(int t){
         if (t > 0){
-            printf("CIMA\n");
+            printf("DIREITA\n");
+            torre_move(t-1);
         }
-        torre_mov(t-1);
         }
         
+    //FUNÇÃO RECURSIVA DE MOVIMENTAÇÃO DA RAINHA 8 CASAS PARA A ESQUERDA
     void rainha_move(int r){
         if(r > 0){
-          printf("ESQUERDA\n")  
+          printf("ESQUERDA\n"); 
+          rainha_move(r-1);
         }
     }
 
     //MOVIMENTAÇÃO DO BISPO 5 CASAS DIAGONAL DIREITA - CIMA
     printf("\nBISPO MOVE\n\n");
-    bispo_move(10);
+    bispo_move(bispo_mov);
+
+
+//MOVIMENTAÇÃO DA TORRE 5 CASAS PARA A DIREITA
+    printf("\nTORRE MOVE\n\n");
+    torre_move(torre_mov);
 
     //MOVIMENTAÇÃO DA RAINHA 8 CASAS PARA A ESQUERDA
     printf("\nRAINHA MOVE\n\n");
-    rainha_move(8);
+    rainha_move(rainha_mov);
 
-//MOVIMENTAÇÃO DO CAVALO, LOOP ANINHADO
+    //MOVIMENTAÇÃO DO CAVALO EM L (CIMA CIMA DIREITA)
     printf("\nCAVALO MOVE\n\n");
-    int cur_cavalo = 1;
-
-    while(cur_cavalo <= torre_mov){
-        for(int i = 1; i<=2;i++){
-            printf("BAIXO\n");}
-        cur_cavalo++;
-        printf("ESQUERDA\n");
-    };
+    for(int i = 0; i < cavalo_mov; i++){
+        for (int j = 0; j < 2; j++){
+            printf("CIMA\n");
+        }
+        printf("DIREITA\n");
+    }
 
     printf("\n");
     return 0;
+
 }
