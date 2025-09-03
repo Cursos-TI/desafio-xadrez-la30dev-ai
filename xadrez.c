@@ -14,34 +14,41 @@ int main() {
     int cavalo_mov = 3;
 
 
-    //MOVIMENTAÇÃO DO BISPO, LAÇO WHILE
-    int cur_bispo = 1;
-    printf("\nBISPO MOVE\n\n");
-    while (cur_bispo <= bispo_mov){
-        if (cur_bispo %2 == 0){
+
+
+    void bispo_move(int b){
+        if (b > 0){
+            if (b %2 == 0){
             printf("CIMA\n");
         }
         else{
             printf("DIREITA\n");
         }
+            bispo_move(b-1);
+        }
+    }
+
+
+    void torre_move(int t){
+        if (t > 0){
+            printf("CIMA\n");
+        }
+        torre_mov(t-1);
+        }
         
-        cur_bispo++;
+    void rainha_move(int r){
+        if(r > 0){
+          printf("ESQUERDA\n")  
+        }
     }
 
-    //MOVIMENTAÇÃO DA TORRE, LAÇO WHILE-DO
-    printf("\nTORRE MOVE\n\n");
-    int cur_torre = 1;
-    do {
-        printf("DIREITA\n");
-        cur_torre++;
-    }
-    while(cur_torre <= torre_mov);
+    //MOVIMENTAÇÃO DO BISPO 5 CASAS DIAGONAL DIREITA - CIMA
+    printf("\nBISPO MOVE\n\n");
+    bispo_move(10);
 
-    //MOVIMENTAÇÃO DA RAINHA, LAÇO FOR
+    //MOVIMENTAÇÃO DA RAINHA 8 CASAS PARA A ESQUERDA
     printf("\nRAINHA MOVE\n\n");
-    for (int i = 1; i <= rainha_mov; i++){
-        printf("ESQUERDA\n");
-    }
+    rainha_move(8);
 
 //MOVIMENTAÇÃO DO CAVALO, LOOP ANINHADO
     printf("\nCAVALO MOVE\n\n");
